@@ -14,14 +14,14 @@ namespace ParcialDario.Consola
 
             do
             {
-                Console.WriteLine("\n--- Menú Librería ---");
+                Console.WriteLine("--- Menú Librería ---");
                 Console.WriteLine("1. Listar artículos");
                 Console.WriteLine("2. Buscar por código");
                 Console.WriteLine("3. Agregar artículo");
                 Console.WriteLine("4. Eliminar artículo");
                 Console.WriteLine("5. Salir");
                 Console.Write("Opción: ");
-                opcion = Console.ReadLine();
+                opcion = Console.ReadLine()!;
 
                 try
                 {
@@ -39,7 +39,7 @@ namespace ParcialDario.Consola
                             break;
                         case "3":
                             Console.Write("Tipo (cuaderno/lapicera): ");
-                            var tipo = Console.ReadLine().ToLower();
+                            var tipo = Console.ReadLine()!.ToLower();
                             Console.Write("Código: "); var c = Console.ReadLine();
                             Console.Write("Descripción: "); var d = Console.ReadLine();
                             Console.Write("Precio: "); var p = decimal.Parse(Console.ReadLine()!);
