@@ -5,17 +5,18 @@ using static ParcialDario.Datos.RepositorioArticulo;
 
 namespace ParcialDario.Servicios
 {
-    public class ServiciosArticulos
+    public class ServiciosArticulos: IServiciosArticulos
     {
         private readonly IRepositorioArticulos _repositorio;
+
+        public Articulos this[string codigo] => throw new NotImplementedException();
+
         public ServiciosArticulos(IRepositorioArticulos repositorio)
         {
             _repositorio = repositorio;
         }
 
-        public ServiciosArticulos()
-        {
-        }
+       
 
         public List<Articulos> ObtenerTodos() => _repositorio.ObtenerTodos();
 
@@ -45,5 +46,20 @@ namespace ParcialDario.Servicios
 
         public Articulos BuscarPorCodigo(string codigo) =>
             _repositorio.BuscarPorCodigo(codigo);
+
+        public void Agregar(Articulos articulo)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Eliminar(string codigo)
+        {
+            throw new NotImplementedException();
+        }
+
+        public bool Existe(Articulos articulo)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
