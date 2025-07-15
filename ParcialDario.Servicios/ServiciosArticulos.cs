@@ -47,19 +47,6 @@ namespace ParcialDario.Servicios
         public Articulos BuscarPorCodigo(string codigo) =>
             _repositorio.BuscarPorCodigo(codigo);
 
-        public void Agregar(Articulos articulo)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void Eliminar(string codigo)
-        {
-            throw new NotImplementedException();
-        }
-
-        public bool Existe(Articulos articulo)
-        {
-            throw new NotImplementedException();
-        }
+       
     }
 }
